@@ -1,0 +1,513 @@
+html {
+    background-color: #F8EDE3;
+    scroll-behavior: smooth;
+}
+
+section {
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Catalish Huntera';
+    src: url("fonts/catalish_huntera.woff");
+}
+
+@font-face {
+    font-family: 'Catalish Huntera';
+    src: url("fonts/catalish_huntera_italic.woff");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sloop';
+    src: url("fonts/sloop.ttf");
+}
+
+@font-face {
+    font-family: 'Gyahegi';
+    src: url("fonts/gyahegi.otf");
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url("fonts/dmsans.ttf");
+}
+
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url("fonts/the_seasons_regular.otf");
+}
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url("fonts/the_seasons_bold.otf");
+    font-weight: bold;
+}
+
+@keyframes fade-in {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+} 
+
+@keyframes fade-out {
+    100%{opacity: 0;}
+    0%{opacity: 1;}
+} 
+
+/** HEAD */
+
+header {
+    background-color: #F8EDE3;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    padding: 20px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+#nav {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar {
+    display: inline-flex;
+    font-weight: bold;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    padding-right: 100px;
+    right: 0;
+    
+}
+
+.title span {
+    font-size: 100px;
+    font-family: 'Sloop';
+}
+
+.title {
+    font-family: 'Gyahegi';
+    font-weight: normal;
+}
+
+#nav .title {
+    margin-top: 4.7vh;
+    position: absolute;
+    padding-left: 35px;
+    left: 0;
+    text-align: center;
+    align-items: center;
+    transition: ease-out 0.2s;
+}
+
+#nav .title:hover {
+    scale: 105%;
+    cursor: default;
+}
+
+#nav a {
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-left: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 50%;
+    transition: ease-out 0.5s;
+}
+
+#nav a:hover {
+    opacity: 100%;
+    background-color: #DFD3C3;
+}
+
+.home, .about, .products {
+    font-family: 'DM Sans';
+    font-size: 25px;
+    font-weight: normal;
+}
+.searchbutton {
+    padding-left: 20px;
+}
+
+.searchbar {
+    width: 11em;
+    height: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    background-color: white;
+    transition: ease-out 0.5s;
+    border: black, solid, 2px;
+}
+
+.searchbar:hover {
+    width: 15em;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    transition: ease-out 0.1s;
+    opacity: 50%;
+}
+
+.button:hover {
+    opacity: 100%;
+    transform: scale(115%);
+}
+
+.search {   
+    font-family: 'DM Sans';
+    border: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.searchicon {
+    height: 20px;
+}
+
+/** HOMEPAGE */
+
+#home {
+    padding-top: 50px;
+}
+
+.container {
+    height: 89%;
+    width: 100%;
+}
+
+.homebg {
+    position: relative;
+    border: black, solid, 2px;
+    border-radius: 10px;
+    background-image: url("Elements/home.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container .text {
+    border-radius: 10px;
+    background-color: #dfd3c358;
+    backdrop-filter: blur(2px);
+    color: white;
+    text-shadow: 0 0 10px white;
+    width: 100%;
+    padding-top: 17%;
+}
+.text h1 {
+    text-align: center;
+    font-family: 'The Seasons';
+    font-size: 50px;
+}
+
+.text h2 {
+    margin-top: -20px;
+    text-align: center;
+    font-family: 'The Seasons';
+}
+
+/** RECOMMENDATIONS */
+
+#recommendations {
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+}
+
+#recommendations h2 {
+    font-family: 'DM Sans';
+    color: #C5705D;
+    text-transform: uppercase;
+}
+
+#recommendations h1 {
+    margin-top: -5px;
+    font-size: 70px;
+    font-family: 'The Seasons';
+}
+
+.container2 {
+    height: 100%;
+    width: 100%;
+}
+
+.images a {
+    color: black;
+    text-decoration: none;
+    transition: ease-out 0.3s;
+}
+
+.images a:hover {
+    text-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+
+.images {
+    display: inline-flex;
+    text-align: center;
+
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    transition: ease-out 0.3s;
+}
+
+.img:hover {
+    scale: 110%;
+}
+
+.txt {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: -250px;
+}
+
+.desc {
+    text-align: center;
+    overflow: hidden;
+    animation: fade-out 0.5s;
+    opacity: 0%;
+    font-family: 'DM Sans';
+    text-align: center;
+    font-size: 20px;
+    padding-left: 33%;
+    padding-right: 33%;
+    margin-top: -15px;
+}
+
+.product {
+    font-family: 'The Seasons';
+    font-size: 40px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.product:hover {
+    cursor: pointer;
+}
+
+#recommendations input {
+    animation: fade-out 1s;
+    display: none;
+}
+
+#trigger:checked ~ * .desc, #trigger1:checked ~ * .desc, #trigger2:checked ~ * .desc {
+    opacity: 100%;
+    animation: fade-in 1s;
+}
+
+/** ABOUT US */
+
+.container3 {
+    margin-top: 4.5%;
+    height: 89%;
+    width: 100%;
+    
+}
+.abtbg {
+    justify-content: center;
+    display: inline-flex;
+    position: relative;
+    border: black, solid, 2px;
+    border-radius: 10px;
+    background-image: url("Elements/img5.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container3 .abttext {
+    border-radius: 10px;
+    background-color: #dfd3c38d;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    color: black;
+}
+
+.container3 img {
+    width: 30%;
+    height: 70%;
+    border: black, solid, 2px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    margin-top: -41.5vh;
+    margin-right: 100px;
+}
+
+.abttext h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: 'The Seasons';
+    text-align: left;
+    transition: ease-out 0.3s;
+    margin-top: 25vh;
+    margin-left: 100px;
+}
+
+.abttext h1:hover {
+    cursor: default;
+    letter-spacing: 5px;
+}
+
+.paragraph {
+    margin-top: -20px;
+    margin-left: -115px;
+    font-family: 'DM Sans';
+    text-align: left;
+    font-size: 25px;
+    padding-right: 50%;
+    padding-left: 10%;
+}
+
+#about a {
+    color: black;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+#about a:hover {
+    font-weight: bold;
+}
+
+/** PRODUCTS */
+
+.container4 {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+#products {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#products h1 {
+    margin-top: 10vh;
+    font-size: 60px;
+    font-family: 'The Seasons';
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+#products a {
+    color: black;
+    text-decoration: none;
+}
+
+#products label {
+    transition: ease-out 0.3s;
+}
+
+#products label:hover {
+    cursor: pointer;
+    background-color: #a59286;
+}
+
+.pimgs {
+    margin-top: -150px;
+    display: inline-flex;
+    scale: 60%;
+}
+
+.pimg {
+    display: block;
+    transition: ease-out 0.3s;
+}
+
+.pimg:hover {
+    scale: 110%
+}
+
+.pimg label {
+    display: block;
+    padding: 10px;
+    background-color: #d0b8a8;
+    font-size: 30px;
+    font-family: 'The Seasons';
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/** FOOTER */
+
+#foottxt {
+    position: absolute;
+    left: 0;
+    background-color: #C5705D;
+    width: 100%;
+    display: inline-flex;
+}
+
+.contacts {
+    margin-top: -5px;
+    font-family: 'DM Sans';
+    padding-left: 25px;
+}
+
+#foottxt .title {
+    position: absolute;
+    margin-right: 5vh;
+    margin-top: 3vh;
+    right: 0;
+    font-size: 30px;
+    transition: ease-out 0.3s;
+}
+
+#foottxt a {
+    color: black;
+}
+
+#foottxt .title:hover {
+    scale: 105%;
+}
+
+.contacts a {
+    text-decoration: none;
+    transition: ease-out 0.2s;
+}
+
+.contacts a:hover {
+    font-weight: bold;
+}
+

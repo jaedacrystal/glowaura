@@ -1,0 +1,531 @@
+html {
+    background-color: #F8EDE3;
+}
+
+section {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'Catalish Huntera';
+    src: url("fonts/catalish_huntera.woff");
+}
+
+@font-face {
+    font-family: 'Catalish Huntera';
+    src: url("fonts/catalish_huntera_italic.woff");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sloop';
+    src: url("fonts/sloop.ttf");
+}
+
+@font-face {
+    font-family: 'Gyahegi';
+    src: url("fonts/gyahegi.otf");
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url("fonts/dmsans.ttf");
+}
+
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url("fonts/the_seasons_regular.otf");
+}
+
+@font-face {
+    font-family: 'The Seasons';
+    src: url("fonts/the_seasons_bold.otf");
+    font-weight: bold;
+}
+
+@keyframes slide{
+    0% {
+        opacity:0%;
+        transform: translateX(-15%)}
+    100% {
+        opacity:100%;
+        transform: translateX(0%);}
+}
+
+
+@keyframes shake {
+    from {
+        transform: rotate(5deg);
+        transform-origin: center center
+    }
+    to {
+        transform: rotate(-5deg);
+        transform-origin: center center;
+    }
+}
+
+/** HEAD */
+
+header {
+    background-color: #F8EDE3;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    padding: 20px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+#nav {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar {
+    display: inline-flex;
+    font-weight: bold;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    padding-right: 100px;
+    right: 0;
+    
+}
+
+.title span {
+    font-size: 100px;
+    font-family: 'Sloop';
+}
+
+.title {
+    font-family: 'Gyahegi';
+    font-weight: normal;
+}
+
+#nav .title {
+    margin-top: 4.7vh;
+    position: absolute;
+    padding-left: 35px;
+    left: 0;
+    text-align: center;
+    align-items: center;
+    transition: ease-out 0.2s;
+}
+
+#nav .title:hover {
+    scale: 105%;
+    cursor: default;
+}
+
+#nav a {
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-left: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 50%;
+    transition: ease-out 0.5s;
+}
+
+#nav a:hover {
+    opacity: 100%;
+    background-color: #DFD3C3;
+}
+
+.home, .about, .products {
+    font-family: 'DM Sans';
+    font-size: 25px;
+    font-weight: normal;
+}
+.searchbutton {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.searchbar {
+    width: 11em;
+    height: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    background-color: white;
+    transition: ease-out 0.5s;
+    border: black, solid, 2px;
+}
+
+.searchbar:hover {
+    width: 15em;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    transition: ease-out 0.1s;
+    opacity: 50%;
+}
+
+.button:hover {
+    opacity: 100%;
+    transform: scale(115%);
+}
+
+.search {   
+    font-family: 'DM Sans';
+    border: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.searchicon {
+    height: 20px;
+}
+
+/** PRODUCTS */
+
+#product {
+    margin-top: 8%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+#productinfo {
+    text-align: center;
+    align-items: center;
+    padding-left: 10%;  
+    padding-right: 10%;  
+    display: inline-flex;
+}
+
+#productinfo img {
+    border: black, solid, 2px;
+    border-radius: 10px;
+    width: 40vh;
+}
+
+#productinfo .text {
+    text-align: justify;
+    margin-top: -8vh;
+    font-size: 25px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#productinfo h1 {
+    border-radius: 10px;
+    padding: 2%;
+    text-align: center;
+    background-color: #DFD3C3;
+    font-family: 'The Seasons';
+}
+
+#productinfo p {
+    font-family: 'DM Sans';
+}
+
+/** BENEFITS */
+
+.btitle {
+    margin-top: 15px;
+    border: black, solid, 2px;
+    border-radius: 50px;
+    padding: 0.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    font-size: 40px;
+    text-align: center;
+    margin-right: 10%;
+    transition: 0.3s ease-out;
+}
+
+.btitle:hover {
+    cursor: pointer;
+    scale: 105%;
+    background-color: #DFD3C3;
+}
+
+.benefittext {
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+#benefits {
+    padding-left: 12%;
+    padding-right: 10%;
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+    width: 70%;
+    font-size: 25px;
+    font-family: 'The Seasons';
+}
+
+#benefits p {
+    align-items: center;
+    padding: 2%;
+    white-space: nowrap;
+    background-color: #DFD3C3;
+    border-radius: 50px;
+    margin-right: 10px;
+    transition: 0.4s ease-out;
+    opacity: 70%;
+    margin-top: 45px;
+}
+
+#benefits p:hover {
+    cursor: default;
+    padding-left: 5%;
+    padding-right:5%;
+    opacity: 100%;
+}
+
+.benefit {
+    margin-top: -5px;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: inline-flex;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0%;
+    transition: 0.2s ease-out;
+}
+
+#benefits input {
+    display: none;
+}
+
+#trigger:checked ~ * .benefit {
+    opacity: 100%;
+    animation: slide 0.5s ease-out;
+}
+
+/** RECOS */
+
+#recommendations {
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+    width: 97%;
+    border: black, solid, 2px;
+    padding: 1%;
+    background-color: #DFD3C3;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+#recommendations img {
+    width: 300px;
+    border-radius: 20px;
+    border: black, solid, 2px;
+    transition: 0.3s ease-out;
+}
+
+#recommendations img:hover {
+    scale: 105%;
+}
+
+.recoprod {
+    text-align: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 100%;
+}
+
+.recoprod p {
+    font-size: 20px;
+    font-family: 'The Seasons';
+    background-color: #D0B8A8;
+    padding: 1%;
+    border-radius: 20px;
+    color: black;
+    transition: ease-out 0.2s;
+}
+
+#recommendations a {
+    text-decoration: none;
+}
+
+#recommendations p:hover {
+    background-color: #a89485;
+}
+
+/** USAGE AND STORAGE */
+
+#usageandstorage {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    margin-top: -2%;
+}
+
+.usage, .storage {
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+    text-align: center;
+}
+
+#usageandstorage h1 {
+    width: 200px;
+    border-radius: 15px;
+    background-color: #DFD3C3;
+    font-family: 'The Seasons';
+    font-size: 30px;
+}
+
+#usageandstorage p {
+    font-family: 'DM Sans';
+    font-size: 25px;
+    text-align: justify;
+}
+
+.container {
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+    width: 100%;
+    padding: 5%;
+}
+
+/** FOOTER */
+
+#foottxt {
+    position: absolute;
+    left: 0;
+    top: 155vh;
+    background-color: #C5705D;
+    width: 100%;
+    display: inline-flex;
+}
+
+.contacts {
+    margin-top: -5px;
+    font-family: 'DM Sans';
+    padding-left: 25px;
+}
+
+#foottxt .title {
+    position: absolute;
+    margin-right: 5vh;
+    margin-top: 3vh;
+    right: 0;
+    font-size: 30px;
+    transition: ease-out 0.3s;
+}
+
+#foottxt a {
+    color: black;
+}
+
+#foottxt .title:hover {
+    scale: 105%;
+}
+
+.contacts a {
+    text-decoration: none;
+    transition: ease-out 0.2s;
+}
+
+.contacts a:hover {
+    font-weight: bold;
+}
+
+/** MEMBERS */
+
+#members {
+    margin-top: 10vh;
+    text-align: center;
+    font-family: 'The Seasons';
+}
+
+#members h1 {
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.2s ease-out;
+}
+
+#members h1:hover {
+    cursor: default;
+    text-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+#members h3 {
+    font-family: 'DM Sans';
+    color: #C5705D;
+}
+
+.person {
+    padding: 10px;
+}
+
+#members span {
+    color: black;
+    font-weight: normal;
+    transition: 0.2s ease-out;
+}
+
+#members span:hover {
+    cursor: default;
+    font-weight: bold;
+}
+
+
+/** MEMBERS FOOTER */
+
+#membersfooter .foottxt {
+    position: absolute;
+    left: 0;
+    top: 100vh;
+    background-color: #C5705D;
+    width: 100%;
+    display: inline-flex;
+}
+
+#membersfooter .contacts {
+    margin-top: -5px;
+    font-family: 'DM Sans';
+    padding-left: 25px;
+}
+
+#membersfooter .foottxt .title {
+    position: absolute;
+    margin-right: 5vh;
+    margin-top: 3vh;
+    right: 0;
+    font-size: 30px;
+    transition: ease-out 0.3s;
+}
+
+#membersfooter .foottxt a {
+    color: black;
+}
+
+#membersfooter .foottxt .title:hover {
+    scale: 105%;
+}
+
+.contacts a {
+    text-decoration: none;
+    transition: ease-out 0.2s;
+}
+
+.contacts a:hover {
+    font-weight: bold;
+}
